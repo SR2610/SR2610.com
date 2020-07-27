@@ -11,7 +11,7 @@ for (var i in postings) {
         var fulldate = (d.getDate() + '/'+ (d.getMonth() + 1)  +  '/' +  d.getFullYear());
           if(p.type == 'text'){
             var str = p.body;
-            var newstr= str.replace("<img",'<img class="img-fluid"')
+            var newstr = str.replace(/<img/g, '<img class="img-fluid"');
             text += '<h2>'+p.title +'</h2><br><h5>' +fulldate + '</h5> ' + ' <p class="lead mb-5"><span>'+  newstr +'</span></p><hr>';
   }
       }
